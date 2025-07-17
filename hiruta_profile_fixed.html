@@ -12,6 +12,448 @@
         }
 
         body {
+            font-family: -apple-system, BlinkMacMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #1c1e21;
+        }
+
+        /* Header */
+        .header {
+            background-color: #1877f2;
+            color: white;
+            padding: 0 16px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            height: 56px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+        }
+
+        .search-box {
+            background-color: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            color: white;
+            width: 300px;
+            outline: none;
+        }
+
+        .search-box::placeholder {
+            color: rgba(255,255,255,0.8);
+        }
+
+        .nav-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .nav-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .nav-icon:hover {
+            background-color: rgba(255,255,255,0.3);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 56px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Cover Photo */
+        .cover-photo {
+            height: 350px;
+            background-image: url('link/header.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+        }
+
+        .cover-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.3));
+            height: 100px;
+        }
+
+        /* Profile Info */
+        .profile-info {
+            background-color: white;
+            border-radius: 8px;
+            margin: -50px 20px 20px 20px;
+            padding: 20px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: end;
+            margin-bottom: 20px;
+        }
+
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            border: 4px solid white;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 48px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin-top: -60px;
+            object-fit: cover;
+        }
+
+        .profile-details {
+            flex: 1;
+        }
+
+        .profile-name {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .profile-subtitle {
+            color: #65676b;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .profile-stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 16px;
+        }
+
+        .stat {
+            color: #65676b;
+            font-size: 14px;
+        }
+
+        .stat strong {
+            color: #1c1e21;
+        }
+
+        .profile-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background-color: #1877f2;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #166fe5;
+        }
+
+        .btn-secondary {
+            background-color: #e4e6ea;
+            color: #1c1e21;
+        }
+
+        .btn-secondary:hover {
+            background-color: #d8dadf;
+        }
+
+        /* Profile Bio */
+        .profile-bio {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 0 20px 20px 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .bio-section {
+            margin-bottom: 16px;
+        }
+
+        .bio-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .bio-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .bio-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            color: #65676b;
+        }
+
+        .bio-icon {
+            width: 16px;
+            height: 16px;
+            margin-right: 8px;
+        }
+
+        /* Feed */
+        .feed {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Post Creation */
+        .post-creator {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .post-creator-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .creator-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #1877f2, #42a5f5);
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            object-fit: cover;
+        }
+
+        .post-input {
+            width: 100%;
+            border: none;
+            padding: 12px;
+            border-radius: 20px;
+            background-color: #f0f2f5;
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .post-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .post-btn {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 8px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .post-btn:hover {
+            background-color: #166fe5;
+        }
+
+        /* Posts */
+        .post {
+            background-color: white;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #e4e6ea;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #1877f2, #42a5f5);
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            object-fit: cover;
+        }
+
+        .post-info h3 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .post-time {
+            font-size: 13px;
+            color: #65676b;
+        }
+
+        .post-content {
+            padding: 16px 20px;
+            font-size: 15px;
+            line-height: 1.4;
+        }
+
+        .post-image {
+            width: 100%;
+            height: 300px;
+            /* background: linear-gradient(45deg, #667eea, #764ba2); */
+            border-radius: 8px;
+            margin-top: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            object-fit: cover;
+        }
+
+        .post-actions {
+            display: flex;
+            border-top: 1px solid #e4e6ea;
+        }
+
+        .post-action {
+            flex: 1;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            border: none;
+            background: none;
+            color: #65676b;
+            font-size: 15px;
+        }
+
+        .post-action:hover {
+            background-color: #f2f2f2;
+        }
+
+        .post-action.liked {
+            color: #1877f2;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                padding: 0 10px;
+            }
+            
+            .search-box {
+                width: 200px;
+            }
+            
+            .cover-photo {
+                height: 350px;
+                background-image: url('link/header.jpg');
+                background-size: cover;
+                background-position: center;
+                position: relative;
+                border-radius: 0 0 8px 8px;
+                overflow: hidden;
+            }
+            
+            .profile-info {
+                margin: -30px 10px 15px 10px;
+                padding: 15px;
+            }
+            
+            .profile-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            
+            .profile-avatar {
+                margin-right: 0;
+                margin-bottom: 16px;
+                width: 100px;
+                height: 100px;
+                font-size: 40px;
+            }
+            
+    The user provided an HTML file. I will first parse the HTML content to understand its structure and identify the existing post sections.
+Then, I will remove the existing post sections from the HTML.
+After that, I will construct the new post sections based on the user's requirements, including the specified text content, timeframes, and image paths (post1.png, post2.png, post3.png, post4.png).
+Finally, I will insert the newly created post sections into the HTML's `feed` div.
+I will ensure that all images are correctly referenced with the `link/` prefix as indicated by the user.
+I will not add any new functionality to the HTML.```html
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蛭田 誠司 - Fakebook</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             background-color: #f0f2f5;
             color: #1c1e21;
@@ -358,7 +800,7 @@
         .post-image {
             width: 100%;
             height: 300px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            /* background: linear-gradient(45deg, #667eea, #764ba2); */
             border-radius: 8px;
             margin-top: 12px;
             display: flex;
@@ -464,18 +906,16 @@
     </header>
 
     <div class="main-content">
-        <!-- Cover Photo -->
         <div class="cover-photo">
             <div class="cover-overlay"></div>
         </div>
 
-        <!-- Profile Info -->
         <div class="profile-info">
             <div class="profile-header">
                 <img src="link/prof.png" alt="蛭田 誠司" class="profile-avatar">
                 <div class="profile-details">
                     <h1 class="profile-name">蛭田 誠司</h1>
-                    <p class="profile-subtitle">ソフトウェアエンジニア</p>
+                    <p class="profile-subtitle">某・物流会社の頑固おやじやってます</p>
                     <div class="profile-stats">
                         <div class="stat"><strong>342</strong> 友達</div>
                         <div class="stat"><strong>15</strong> 共通の友達</div>
@@ -490,25 +930,24 @@
             </div>
         </div>
 
-        <!-- Profile Bio -->
         <div class="profile-bio">
             <div class="bio-section">
                 <h3 class="bio-title">基本データ</h3>
                 <div class="bio-item">
                     <span class="bio-icon">💼</span>
-                    <span>テックカンパニー株式会社でソフトウェアエンジニア</span>
+                    <span>野田運送</span>
                 </div>
                 <div class="bio-item">
                     <span class="bio-icon">🏫</span>
-                    <span>東京工業大学で学習</span>
+                    <span>高卒でトラック免許取得💪</span>
                 </div>
                 <div class="bio-item">
                     <span class="bio-icon">📍</span>
-                    <span>東京都在住</span>
+                    <span>埼玉県</span>
                 </div>
                 <div class="bio-item">
                     <span class="bio-icon">💕</span>
-                    <span>独身</span>
+                    <span>既婚者</span>
                 </div>
                 <div class="bio-item">
                     <span class="bio-icon">📅</span>
@@ -517,19 +956,18 @@
             </div>
         </div>
 
-        <!-- Feed -->
         <div class="feed">
             <div class="post">
                 <div class="post-header">
                     <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
                     <div class="post-info">
                         <h3>蛭田 誠司</h3>
-                        <div class="post-time">3時間前</div>
+                        <div class="post-time">4日前</div>
                     </div>
                 </div>
                 <div class="post-content">
-                    新しいプロジェクトが完成しました！🎉 チーム一丸となって取り組んだ結果、予定より早く完成させることができました。みんなの協力に感謝しています。
-                    <img src="link/project_screenshot.jpg" alt="プロジェクトのスクリーンショット" class="post-image">
+                    仕事終わりについつい。最近は夜遅くまで配送があることが多かったから久しぶりにこの時間。トホホ。
+                    <img src="link/post1.png" alt="仕事終わりに一杯の写真" class="post-image">
                 </div>
                 <div class="post-actions">
                     <button class="post-action">👍 いいね！</button>
@@ -543,31 +981,12 @@
                     <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
                     <div class="post-info">
                         <h3>蛭田 誠司</h3>
-                        <div class="post-time">1日前</div>
+                        <div class="post-time">8日前</div>
                     </div>
                 </div>
                 <div class="post-content">
-                    今日は素晴らしい天気ですね！☀️ 久しぶりに公園を散歩してきました。桜が咲き始めていて、春の訪れを感じます。みなさんも良い一日をお過ごしください。
-                    <img src="link/park_walk.jpg" alt="公園の散歩" class="post-image">
-                </div>
-                <div class="post-actions">
-                    <button class="post-action liked">👍 いいね！済み</button>
-                    <button class="post-action">💬 コメント</button>
-                    <button class="post-action">↗️ シェア</button>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post-header">
-                    <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
-                    <div class="post-info">
-                        <h3>蛭田 誠司</h3>
-                        <div class="post-time">3日前</div>
-                    </div>
-                </div>
-                <div class="post-content">
-                    週末にチームメンバーと一緒にハッカソンに参加してきました。短い時間でしたが、とても濃い経験ができました。新しい技術を学ぶのは楽しいですね！
-                    <img src="link/hackathon_photo.jpg" alt="ハッカソンでの集合写真" class="post-image">
+                    俺は正直猫がすきだ。帰ったらこいついるから外で頑張れる。にゃおん。
+                    <img src="link/post2.png" alt="飼い猫の写真" class="post-image">
                 </div>
                 <div class="post-actions">
                     <button class="post-action">👍 いいね！</button>
@@ -581,12 +1000,33 @@
                     <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
                     <div class="post-info">
                         <h3>蛭田 誠司</h3>
-                        <div class="post-time">1週間前</div>
+                        <div class="post-time">2週間前</div>
                     </div>
                 </div>
                 <div class="post-content">
-                    最近読んだ本「Clean Code」がとても参考になりました。📚 コードの品質について改めて考えさせられる内容でした。エンジニアの方にはぜひおすすめします！
-                    <img src="link/clean_code_book.jpg" alt="Clean Codeの本" class="post-image">
+                    うちの会社、根性ない奴には続かないけど、本気で働くやつは大歓迎だな。
+                    あの件があってから初めて採用始めたみたいです。ぜひ。
+                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=CTdcJHbstECmeaQFexYTp0SNZH8jMVxFvFgMDLOL1d9UOTYxMzhMMzRDR0JQVEpKN1VMVzg3UVVIOS4u" target="_blank">リンクはこちら</a>
+                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=CTdcJHbstECmeaQFexYTp0SNZH8jMVxFvFgMDLOL1d9UOTYxMzhMMzRDR0JQVEpKN1VMVzg3UVVIOS4u" target="_blank"><img src="link/post3.png" alt="会社募集の画像" class="post-image"></a>
+                </div>
+                <div class="post-actions">
+                    <button class="post-action">👍 いいね！</button>
+                    <button class="post-action">💬 コメント</button>
+                    <button class="post-action">↗️ シェア</button>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
+                    <div class="post-info">
+                        <h3>蛭田 誠司</h3>
+                        <div class="post-time">3ヶ月前</div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    趣味で通ってる動物園、最近こいつと目が合うな。
+                    <img src="link/post4.png" alt="動物園の動物の写真" class="post-image">
                 </div>
                 <div class="post-actions">
                     <button class="post-action">👍 いいね！</button>
@@ -630,3 +1070,4 @@
     </script>
 </body>
 </html>
+    
