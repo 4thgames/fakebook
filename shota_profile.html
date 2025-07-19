@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>蛭田 誠司 - Fakebook</title>
+    <title>山口 翔太 - Fakebook</title>
     <style>
         * {
             margin: 0;
@@ -157,7 +157,7 @@
         /* Cover Photo */
         .cover-photo {
             height: 350px;
-            background-image: url('link/header.jpg');
+            background-image: url('link/shota_header.jpg'); /* Corrected path */
             background-size: cover;
             background-position: center;
             position: relative;
@@ -460,6 +460,60 @@
             color: #1877f2;
         }
 
+        /* Custom Alert Styles */
+        .custom-alert-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s, opacity 0.3s;
+        }
+
+        .custom-alert-overlay.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .custom-alert-box {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 300px;
+            width: 90%;
+        }
+
+        .custom-alert-box p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #1c1e21;
+        }
+
+        .custom-alert-button {
+            background-color: #1877f2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background-color 0.2s;
+        }
+
+        .custom-alert-button:hover {
+            background-color: #166fe5;
+        }
+
+
         @media (max-width: 768px) {
             .header-content {
                 padding: 0 10px;
@@ -471,7 +525,7 @@
             
             .cover-photo {
                 height: 350px;
-                background-image: url('link/header.jpg');
+                background-image: url('link/shota_header.jpg'); /* Corrected path in media query */
                 background-size: cover;
                 background-position: center;
                 position: relative;
@@ -520,10 +574,10 @@
                 <input type="text" class="search-box" placeholder="検索" id="searchInput">
                 <div class="search-results" id="searchResults">
                     <a href="#yamaguchi-profile" class="search-result-item" id="yamaguchiResult" style="display: none;">
-                        <div class="search-result-avatar">山</div>
+                        <div class="search-result-avatar">蛭</div>
                         <div class="search-result-info">
-                            <div class="search-result-name">山口翔太</div>
-                            <div class="search-result-subtitle">会社員・東京在住</div>
+                            <div class="search-result-name">蛭田誠司</div>
+                            <div class="search-result-subtitle">会社員・埼玉在住</div>
                         </div>
                     </a>
                 </div>
@@ -545,13 +599,13 @@
 
         <div class="profile-info">
             <div class="profile-header">
-                <img src="link/prof.png" alt="蛭田 誠司" class="profile-avatar">
+                <img src="link/shota_prof.png" alt="山口 翔太" class="profile-avatar"> <!-- Corrected path -->
                 <div class="profile-details">
                     <h1 class="profile-name">山口 翔太</h1>
-                    <p class="profile-subtitle">某・物流会社の頑固おやじやってます</p>
+                    <p class="profile-subtitle">新社会人頑張ってます</p>
                     <div class="profile-stats">
-                        <div class="stat"><strong>342</strong> 友達</div>
-                        <div class="stat"><strong>15</strong> 共通の友達</div>
+                        <div class="stat"><strong>89</strong> 友達</div>
+                        <div class="stat"><strong>5</strong> 共通の友達</div>
                     </div>
                     <div class="profile-actions">
                         <button class="btn btn-primary">👥 友達になる</button>
@@ -572,19 +626,19 @@
                 </div>
                 <div class="bio-item">
                     <span class="bio-icon">🏫</span>
-                    <span>高卒でトラック免許取得💪</span>
+                    <span>未登録</span>
                 </div>
                 <div class="bio-item">
                     <span class="bio-icon">📍</span>
-                    <span>埼玉県</span>
+                    <span>未登録</span>
                 </div>
                 <div class="bio-item">
                     <span class="bio-icon">💕</span>
-                    <span>既婚者</span>
+                    <span>未婚</span>
                 </div>
                 <div class="bio-item">
                     <span class="bio-icon">📅</span>
-                    <span>2015年3月18日からFacebookを利用</span>
+                    <span>2022年4月5日からFacebookを利用</span>
                 </div>
             </div>
         </div>
@@ -592,15 +646,14 @@
         <div class="feed">
             <div class="post">
                 <div class="post-header">
-                    <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
+                    <img src="link/shota_prof.png" alt="山口 翔太" class="avatar"> <!-- Corrected path -->
                     <div class="post-info">
-                        <h3>蛭田 誠司</h3>
-                        <div class="post-time">4日前</div>
+                        <h3>山口 翔太</h3>
+                        <div class="post-time">10ヶ月前</div>
                     </div>
                 </div>
                 <div class="post-content">
-                    仕事終わりについつい。最近は夜遅くまで配送があることが多かったから久しぶりにこの時間。トホホ。
-                    <img src="link/post1.png" alt="仕事終わりに一杯の写真" class="post-image">
+                    こわいこわいこわい　ついてこないでくれ　
                 </div>
                 <div class="post-actions">
                     <button class="post-action">👍 いいね！</button>
@@ -611,15 +664,35 @@
 
             <div class="post">
                 <div class="post-header">
-                    <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
+                    <img src="link/shota_prof.png" alt="山口 翔太" class="avatar"> <!-- Corrected path -->
                     <div class="post-info">
-                        <h3>蛭田 誠司</h3>
-                        <div class="post-time">8日前</div>
+                        <h3>山口 翔太</h3>
+                        <div class="post-time">1年前</div>
                     </div>
                 </div>
                 <div class="post-content">
-                    俺は正直猫がすきだ。帰ったらこいついるから外で頑張れる。にゃおん。
-                    <img src="link/post2.png" alt="飼い猫の写真" class="post-image">
+                    最近仕事が忙しすぎて平日ほとんど人間らしい生活してない
+                    この頃にもどりてー笑
+                </div>
+                     <img src="link/shota_post1.jpg" alt="怖い出来事の写真" class="post-image"> <!-- Corrected path -->
+                <div class="post-actions">
+                    <button class="post-action">👍 いいね！</button>
+                    <button class="post-action">💬 コメント</button>
+                    <button class="post-action">↗️ シェア</button>
+                </div>
+            </div>
+
+            <div class="post">
+                <div class="post-header">
+                    <img src="link/shota_prof.png" alt="山口 翔太" class="avatar"> <!-- Corrected path -->
+                    <div class="post-info">
+                        <h3>山口 翔太</h3>
+                        <div class="post-time">1年前</div>
+                    </div>
+                </div>
+                <div class="post-content">
+                    ４月から社会人になりました。
+                    力みすぎず頑張ります！
                 </div>
                 <div class="post-actions">
                     <button class="post-action">👍 いいね！</button>
@@ -630,36 +703,17 @@
 
             <div class="post">
                 <div class="post-header">
-                    <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
+                    <img src="link/shota_prof.png" alt="山口 翔太" class="avatar"> <!-- Corrected path -->
                     <div class="post-info">
-                        <h3>蛭田 誠司</h3>
-                        <div class="post-time">2週間前</div>
+                        <h3>山口 翔太</h3>
+                        <div class="post-time">2年前</div>
                     </div>
                 </div>
                 <div class="post-content">
-                    うちの会社、根性ない奴には続かないけど、本気で働くやつは大歓迎だな。
-                    あの件があってから初めて採用始めたみたいです。ぜひ。
-                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=CTdcJHbstECmeaQFexYTp0SNZH8jMVxFvFgMDLOL1d9UOTYxMzhMMzRDR0JQVEpKN1VMVzg3UVVIOS4u" target="_blank">リンクはこちら</a>
-                    <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=CTdcJHbstECmeaQFexYTp0SNZH8jMVxFvFgMDLOL1d9UOTYxMzhMMzRDR0JQVEpKN1VMVzg3UVVIOS4u" target="_blank"><img src="link/post3.png" alt="会社募集の画像" class="post-image"></a>
-                </div>
-                <div class="post-actions">
-                    <button class="post-action">👍 いいね！</button>
-                    <button class="post-action">💬 コメント</button>
-                    <button class="post-action">↗️ シェア</button>
-                </div>
-            </div>
-
-            <div class="post">
-                <div class="post-header">
-                    <img src="link/prof.png" alt="蛭田 誠司" class="avatar">
-                    <div class="post-info">
-                        <h3>蛭田 誠司</h3>
-                        <div class="post-time">3ヶ月前</div>
-                    </div>
-                </div>
-                <div class="post-content">
-                    趣味で通ってる動物園、最近こいつと目が合うな。
-                    <img src="link/post4.png" alt="動物園の動物の写真" class="post-image">
+                    実家のパン屋、
+                    みんな大好きヤマパンが<a href="https://kohsss527.wixsite.com/my-site-1" target="_blank">HP</a>を作りました！
+                    みんな口コミとか書いてね
+                    <a href="https://kohsss527.wixsite.com/my-site-1" target="_blank"><img src="link/shota_post4.jpg" alt="ヤマパンの写真" class="post-image"></a> <!-- Corrected path -->
                 </div>
                 <div class="post-actions">
                     <button class="post-action">👍 いいね！</button>
@@ -670,7 +724,36 @@
         </div>
     </div>
 
+    <!-- Custom Alert HTML -->
+    <div id="customAlert" class="custom-alert-overlay">
+        <div class="custom-alert-box">
+            <p id="customAlertMessage"></p>
+            <button id="customAlertClose" class="custom-alert-button">OK</button>
+        </div>
+    </div>
+
     <script>
+        // Function to show custom alert
+        function showAlert(message) {
+            const alertOverlay = document.getElementById('customAlert');
+            const alertMessage = document.getElementById('customAlertMessage');
+            const alertCloseButton = document.getElementById('customAlertClose');
+
+            alertMessage.textContent = message;
+            alertOverlay.classList.add('show');
+
+            alertCloseButton.onclick = function() {
+                alertOverlay.classList.remove('show');
+            };
+
+            // Close on overlay click
+            alertOverlay.onclick = function(e) {
+                if (e.target === alertOverlay) {
+                    alertOverlay.classList.remove('show');
+                }
+            };
+        }
+
         // 検索機能
         const searchInput = document.getElementById('searchInput');
         const searchResults = document.getElementById('searchResults');
@@ -679,7 +762,7 @@
         searchInput.addEventListener('input', function() {
             const query = this.value.toLowerCase().trim();
             
-            if (query.includes('山口翔太') || query.includes('山口') || query.includes('翔太') || query.includes('yamaguchi')) {
+            if (query.includes('蛭田誠司') || query.includes('蛭田') || query.includes('誠司') || query.includes('hiruta')) {
                 yamaguchiResult.style.display = 'flex';
                 searchResults.classList.add('show');
             } else if (query === '') {
@@ -693,17 +776,15 @@
 
         // 検索結果以外をクリックしたときに結果を隠す
         document.addEventListener('click', function(e) {
-            if (!e.target.closest('.search-container')) {
+            if (!e.target.closest('.search-container') && !e.target.closest('.custom-alert-overlay')) {
                 searchResults.classList.remove('show');
             }
         });
 
-        // 山口翔太のリンクをクリックしたときの処理
+        // 蛭田誠司のリンクをクリックしたときの処理
         yamaguchiResult.addEventListener('click', function(e) {
             e.preventDefault();
-            alert('山口翔太のプロフィールページに移動します（ダミーリンク）');
-            // 実際のページ遷移をする場合は以下のようにします：
-            // window.location.href = 'yamaguchi_profile.html';
+             window.location.href = 'https://4thgames.github.io/fakebook/hiruta_profile.html';
         });
 
         // 友達申請機能
